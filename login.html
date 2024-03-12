@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="log in or register your user here" />
+    <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/utils.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <title>Log In or Register</title>
+  </head>
+  <body>
+    <h1>Log In or Register Your Account</h1>
+
+    <form action="/account.pokedex.html" method="post">
+      <label for="Username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label>Select:</label>
+      <input
+        type="radio"
+        id="new_account"
+        name="select_account"
+        value="new_account"
+      />
+      <label for="new_account">Register New Account</label>
+      <input
+        type="radio"
+        id="existing_account"
+        name="select_account"
+        value="existing_account"
+      />
+      <label for="existing_account">Sign in with Existing Account</label>
+
+      <input type="submit" value="Submit" />
+
+      <footer>
+        <section id="footer_links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="allposts.html">Blog</a></li>
+          <li><a href="pokepedia.html">Poképedia</a></li>
+        </section>
+        <section id="footer_contact">
+          <li>Reach out! helpme@dailypokemon.com</li>
+          <li>Give us a call! +47 999 99 999</li>
+        </section>
+      </footer>
+    </form>
+  </body>
+</html>
