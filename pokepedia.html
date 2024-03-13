@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="a searchable site containing all pokemon"
+    />
+    <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/utils.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <title>Poképedia</title>
+  </head>
+  <body>
+    <h1>Poképedia</h1>
+<section id="display_pokepedia">
+    <input type="text" id="inputField" placeholder="Enter Pokémon name" />
+    <button id="myButton">Search</button>
+
+    <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="fire">Fire</option>
+            <option value="grass">Grass</option>
+            <option value="psychic">Psychic</option>
+            <option value="normal">Normal</option>
+            <option value="fighting">Fighting</option>
+            <option value="fairy">Fairy</option>
+            <option value="ice">Ice</option>
+            <option value="electric">Electric</option>
+            <option value="water">Water</option>
+            <option value="bug">Bug</option>
+            <option value="dark">Dark</option>
+            <option value="steel">Steel</option>
+            <option value="rock">Rock</option>
+            <option value="ground">Ground</option>
+            <option value="ghost">Ghost</option>
+            <option value="flying">Flying</option>
+            <option value="dragon">Dragon</option>
+        </select>
+
+    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none" />
+
+    <ul id="myList"></ul>
+    <img id="myImage" src="" />
+</section>
+    <footer>
+      <section id="footer_links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="allposts.html">Blog</a></li>
+        <li><a href="pokepedia.html">Poképedia</a></li>
+      </section>
+      <section id="footer_contact">
+        <li>Reach out! helpme@dailypokemon.com</li>
+        <li>Give us a call! +47 999 99 999</li>
+      </section>
+    </footer>
+  </body>
+</html>
