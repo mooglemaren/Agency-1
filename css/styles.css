@@ -13,6 +13,8 @@ a {
   color:black;
 }
 
+
+/* Navbar style -Frankie */
 header {
   display:flex;
   flex-direction:row;
@@ -38,6 +40,16 @@ header li {
   justify-content:center;
   align-items:center;
   text-align:center;
+  position:relative;
+}
+
+header li a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 header li:hover {
@@ -66,9 +78,38 @@ body {
   text-align:center;
 }
 
-.hero {
-  background-image:url(/assets/images/herobildeindex.webp);
-  height: 400px;
+/* Pokepedia grid system -Frankie*/
+#display_pokepedia ul {
+  display:grid;
+  grid-template-columns:auto auto auto auto auto auto;
+  list-style-type:none;
+}
+
+/* Style every card in pokepedia -Frankie */
+#display_pokepedia ul li {
+  display:flex;
+  flex-direction:column;
+  text-transform:capitalize;
+  background-color:lightgray;
+  margin: 15px;
+  padding: 20px;
+  transition:300ms;
+}
+
+#display_pokepedia ul li:hover {
+  transform:scale(1.1);
+}
+
+#detailedDiv {
+  text-transform:capitalize;
+}
+
+#detailed_poke_title {
+  font-size: 18px;
+}
+
+#detailsImage {
+  height: 300px;
 }
 
 input {
