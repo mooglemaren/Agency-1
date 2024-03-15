@@ -3,8 +3,14 @@
   src: url(/assets/Flexo-Regular.ttf);
 }
 
+@font-face {
+  font-family: Flexo-bold;
+  src: url(/assets/Flexo-Bold.ttf);
+}
+
 a {
   text-decoration:none;
+  color:black;
 }
 
 header {
@@ -23,6 +29,8 @@ header ul {
 }
 
 header li {
+  display:flex;
+  flex-direction:column;
   margin-inline: 50px;
   transition:300ms;
   padding-inline: 20px;
