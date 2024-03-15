@@ -79,14 +79,14 @@ body {
 }
 
 /* Pokepedia grid system -Frankie*/
-#display_pokepedia ul {
+#myList {
   display:grid;
   grid-template-columns:auto auto auto auto auto auto;
   list-style-type:none;
 }
 
 /* Style every card in pokepedia -Frankie */
-#display_pokepedia ul li {
+#myList li {
   display:flex;
   flex-direction:column;
   text-transform:capitalize;
@@ -96,8 +96,39 @@ body {
   transition:300ms;
 }
 
-#display_pokepedia ul li:hover {
+#myList li:hover {
   transform:scale(1.1);
+}
+
+#pokepediaElement {
+  position:relative;
+}
+
+#pokepediaElement a::before {
+  position:absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+#pokepediaBanner {
+  background-color:#565656;
+  color:white;
+  width: 100%;
+  height: 125px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+} 
+
+#display_pokepedia {
+  background-color:#434343;
+  color:white;
+  width: 100%;
+  height: 75px;
 }
 
 #detailedDiv {

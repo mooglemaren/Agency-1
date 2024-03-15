@@ -3,12 +3,12 @@ export const listItemTemplate = (item) => {
     let pokeNumber = `${item.url}`.split("https://pokeapi.co/api/v2/pokemon/", -1);
     return `
     
-    <a href="detailed_pokemon.html?name=${item.name}"><li>${item.name}
+    <li id="pokepediaElement">${item.name}<a href="detailed_pokemon.html?name=${item.name}">
     <img class="myPicture" src=${pokeImage}>
     
-    
+    </a>
     </li>
-    </a>`;
+    `;
 }
 
 export function listData(list, out) {
