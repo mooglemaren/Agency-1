@@ -1,13 +1,64 @@
+@font-face {
+  font-family: Flexo;
+  src: url(/assets/Flexo-Regular.ttf);
+}
+
+a {
+  text-decoration:none;
+}
+
+header {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+  border-bottom: 2px solid grey;
+  width: 100%;
+}
+
+header ul {
+  display:flex;
+  flex-direction:row;
+  list-style-type:none;
+}
+
+header li {
+  margin-inline: 50px;
+  transition:300ms;
+  padding-inline: 20px;
+  padding-block: 10px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+header li:hover {
+  transform:scale(1.15);
+  background-color:rgb(197, 197, 197);
+}
+
+header img {
+  height: 30px;
+}
+
+header i {
+  color:rgb(95, 95, 95);
+}
+
 body {
-  background-color:darkblue;
-  color:white;
-  font-family:Verdana,sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color:#fafafa;
+  color:black;
+  font-family:Flexo;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
 }
+
+
 
 input {
   padding: 5px 20px;
@@ -19,8 +70,4 @@ button {
   background-color:green;
   color:white;
   padding: 5px 20px;
-}
-
-img {
-  height: 350px;
 }
