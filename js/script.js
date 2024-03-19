@@ -35,3 +35,22 @@ button.addEventListener("click", event => {
     fetchData();
 
 })
+
+async function fetchKantoPokemon() {
+    try {
+        const out = document.querySelector("ul#myList");
+        const url = "https://pokeapi.co/api/v2/pokemon?limit=151";
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Could not fetch data");
+        }
+        const obj = await response.json();
+        collection = obj.results;
+        listData(collection, out);
+        console.log(obj.results);
+    } catch(error) {
+        console.error(error);
+    }
+}
+
+   fetchKantoPokemon();
