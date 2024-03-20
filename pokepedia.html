@@ -76,14 +76,39 @@
 
 </section>
     <footer>
-      <section id="footer_links">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="allposts.html">Blog</a></li>
-        <li><a href="pokepedia.html">Poképedia</a></li>
+      <section id="footer_p1">
+        <h2>May we help you?</h2>
+        <li> <a href="about.html">About us</a> </li>
+        <li> <a href="allposts.html">News and posts</a></li>
       </section>
-      <section id="footer_contact">
-        <li>Reach out! helpme@dailypokemon.com</li>
-        <li>Give us a call! +47 999 99 999</li>
+      <section id="footer_p2">
+        <h2>Social media</h2>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        
+      </section>
+      <section id="footer_p3">
+        <h2>Legal</h2>
+        <li>Terms and Conditions</li>
+        <li>Privacy and cookie policy</li>
+
+      </section>
+      <section id="newsletter_signup">
+        <h2>Sign up for Pokémon emails!</h2>
+        <p>I'd like to receive emails about the following:</p>
+        <form>
+          <input type="checkbox" id="pokemon_games" name="pokemon_games" value="games_apps">
+          <label for="pokemon_games">Pokemon video games, apps and more</label><br>
+          
+          <input type="checkbox" id="pokemon_cards" name="pokemon_cards" value="daily_cards">
+          <label for="pokemon_cards">Pokemon daily cards</label><br>
+          
+          <input type="checkbox" id="terms_acceptance" name="terms_acceptance" required>
+          <label for="terms_acceptance">I accept the terms of use and privacy policy</label><br>
+          
+          <input type="submit" value="Submit">
+        </form>
+      <input type="text" id="email" name="email" required />
       </section>
     </footer>
   </body>
