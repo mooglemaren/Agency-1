@@ -8,9 +8,9 @@ let params = new URL (document.location).searchParams;
 
 let name = params.get("name");
 
-async function getPokemonById() {
+async function getPokemonById(itemName) {
     try {
-        const api = `https://pokeapi.co/api/v2/pokemon/${name}`;
+        const api = `https://pokeapi.co/api/v2/pokemon/${itemName}`;
         const response = await fetch (api);
         const obj = await response.json();
         console.log(obj);
@@ -24,4 +24,4 @@ async function getPokemonById() {
     }
 }
 
-getPokemonById();
+getPokemonById(name);

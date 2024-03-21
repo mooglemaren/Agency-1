@@ -8,6 +8,7 @@
       content="a searchable site containing all pokemon"
     />
     <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/select.js" defer></script>
     <script type="module" src="js/utils.js" defer></script>
     <link type="text/css" rel="stylesheet" href="css/styles.css" />
     <title>Poképedia</title>
@@ -41,11 +42,10 @@
     <h1>Poképedia</h1>
     </div>
 <section id="display_pokepedia">
-    <input type="text" id="inputField" placeholder="Enter Pokémon name" />
-    <button id="myButton">Search</button>
+    <input type="text" id="inputField" placeholder="Enter Pokémon name">
 
     <label for="type">Type:</label>
-        <select id="type" name="type">
+        <select id="type" name="type" disabled="disabled">
             <option value="fire">Fire</option>
             <option value="grass">Grass</option>
             <option value="psychic">Psychic</option>
@@ -64,6 +64,8 @@
             <option value="flying">Flying</option>
             <option value="dragon">Dragon</option>
         </select>
+
+        
       </section>
     <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none" />
 
