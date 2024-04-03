@@ -17,6 +17,11 @@ a {
   color: purple;
 }
 
+footer {
+  background-color:grey;
+  width:100%;
+}
+
 /* Navbar style -Frankie */
 header {
   display:flex;
@@ -152,7 +157,7 @@ body {
 }
 
 #detailsImage {
-  height: 600px;
+  height: 400px;
 }
 
 input {

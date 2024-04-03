@@ -36,12 +36,16 @@ export function pokemonDetails(api, out) {
     <div id="detailedDiv">
     <h1>${name}</h1>
     <img id="detailsImage" alt=${name} src=${sprites.other["official-artwork"].front_default}>
-    <p>Type: ${types[0].type.name}</p>
-    <p>Ability: ${abilities[0].ability.name}
-    <p>Stats: ${stats[0].base_stat}
+    <img id="detailsImage" alt=${name} src=${sprites.other["official-artwork"].front_shiny}>
+    <p>Type: ${types.map((type) => type.type.name).join(', ')}</p>
+    <p>Abilites: ${abilities.map((ability) => ability.ability.name).join(', ')}</p>
+    <p>HP: ${stats[0].base_stat}</p>
+    <p>Attack: ${stats[1].base_stat}</p>
+    <p>Defense: ${stats[2].base_stat}</p>
+    <p>Special-Attack: ${stats[3].base_stat}</p>
+    <p>Special-Defense: ${stats[4].base_stat}</p>
+    <p>Speed: ${stats[5].base_stat}</p>
     </div>
     
     `;
 }
-
-
