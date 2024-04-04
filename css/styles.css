@@ -1,4 +1,9 @@
 @font-face {
+  font-family: myFirstFont;
+  src:local("../assets/Flexo-Regular.ttf");
+}
+
+@font-face {
   font-family: Flexo;
   src: url(/assets/Flexo-Regular.ttf);
 }
@@ -102,6 +107,7 @@ body {
   margin: 15px;
   padding: 20px;
   transition:300ms;
+  filter: drop-shadow(2px 2px .5px #c2c2c2); /*added drops shadow to cards*/
 }
 
 #myList li:hover {
