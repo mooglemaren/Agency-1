@@ -13,7 +13,13 @@
 html {
   font-family: "Flexo-Regular", sans-serif;
 }
+.timelineDiv {
+  background-color: aquamarine;
+  max-width: 80vw;
+  margin-inline: auto;
+}
 /* The actual timeline (the vertical ruler) */
+
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -40,17 +46,17 @@ html {
 .container {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
   width: 50%;
-  filter: drop-shadow(3px 3px .5px #c2c2c2); 
+  filter: drop-shadow(3px 3px 3px #c2c2c2);
+  /* filter: drop-shadow(10px 10px 1px #000);  */
   h2 {
+    color: aqua;
   }
-  p {
-    }
-  img {
-    width: 100%;
-  }
+  /* p {
+    color:blue;
+    } */
 }
+
 
 /* The circles on the timeline */
 .container::after {
@@ -67,8 +73,15 @@ html {
 }
 
 /* Place the container to the left */
-.left {
+.left, .right {
   left: 0;
+  background-color: #fafafa;
+  border-radius: 5px;
+  img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
 }
 
 /* Place the container to the right */
@@ -112,7 +125,8 @@ html {
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: blueviolet;
+  /* background-color: white; */
   position: relative;
   border-radius: 6px;
 }
