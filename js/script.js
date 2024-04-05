@@ -6,7 +6,7 @@ const image = document.querySelector("img#myImage");
 
 const api = `https://pokeapi.co/api/v2/pokemon/`;
 //console.log(collection);
-//let collection = [];
+//let collection = []; 
 
 async function fetchKantoPokemon() {
     try {
