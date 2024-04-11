@@ -78,7 +78,7 @@ body {
   padding: 0px;
   background-color:#fafafa;
   color:black;
-  font-family:Flexo;
+  font-family:sans-serif;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -152,12 +152,20 @@ body {
   text-transform:capitalize;
 }
 
+#detailedDiv p {
+  text-align:left;
+}
+
 #detailed_poke_title {
   font-size: 18px;
 }
 
 #detailsImage {
   height: 400px;
+}
+
+#random_pokemon {
+  text-transform:capitalize;
 }
 
 input {
