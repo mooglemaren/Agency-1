@@ -70,7 +70,7 @@ header li:hover {
   background-color:rgb(197, 197, 197);
 }
 
-header img {
+header ul li img {
   height: 30px;
 }
 
@@ -89,6 +89,49 @@ body {
   justify-content:center;
   align-items:center;
   text-align:center;
+}
+
+/* Hamburger menu -Frankie */
+.desktoplinks {
+  display:none;
+}
+
+.links {
+  display:none;
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  transition: 300ms;
+}
+
+.links ul {
+  display:flex;
+  flex-direction:column;
+  margin: 0px;
+  background-color:rgba(0, 0, 0, 90%);
+  padding: 20px;
+  z-index: 1;
+}
+
+.links a {
+  color:white;
+}
+
+#hamburger-menu {
+  display:none;
+}
+
+#hamburger-menu:checked ~ .links {
+  display:flex;
+}
+
+.fa-bars {
+  color: black;
+  font-size: 30px;
+  padding: 10px;
+  position:absolute;
+  top: 5px;
+  left: 30px;
 }
 
 /* Pokepedia grid system -Frankie*/
