@@ -33,18 +33,22 @@ export function pokemonDetails(api, out) {
     const {name, sprites, types, abilities, stats} = pokemon;
     out.innerHTML = `
     
+    <h1 id="detailedName">${name}</h1>
     <div id="detailedDiv">
-    <h1>${name}</h1>
+    <div>
     <img id="detailsImage" alt=${name} src=${sprites.other["official-artwork"].front_default}>
-    <img id="detailsImage" alt=${name} src=${sprites.other["official-artwork"].front_shiny}>
+    <img id="detailsImage" alt=Shiny ${name} src=${sprites.other["official-artwork"].front_shiny}>
+    </div>
+    <div id="pokemonInfo">
     <p>Type: ${types.map((type) => type.type.name).join(', ')}</p>
-    <p>Abilites: ${abilities.map((ability) => ability.ability.name).join(', ')}</p>
+    <p>Abilities: ${abilities.map((ability) => ability.ability.name).join(', ')}</p>
     <p>HP: ${stats[0].base_stat}</p>
     <p>Attack: ${stats[1].base_stat}</p>
     <p>Defense: ${stats[2].base_stat}</p>
     <p>Special-Attack: ${stats[3].base_stat}</p>
     <p>Special-Defense: ${stats[4].base_stat}</p>
     <p>Speed: ${stats[5].base_stat}</p>
+    </div>
     </div>
     
     `;

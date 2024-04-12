@@ -126,11 +126,11 @@ body {
 }
 
 .fa-bars {
-  color: black;
+  color: white;
   font-size: 30px;
   padding: 10px;
   position:absolute;
-  top: 5px;
+  top: 15px;
   left: 30px;
 }
 
@@ -139,6 +139,9 @@ body {
   display:grid;
   grid-template-columns:auto auto auto auto auto auto;
   list-style-type:none;
+  justify-content:center;
+  align-items:center;
+  padding:0;
 }
 
 /* Style every card in pokepedia -Frankie */
@@ -148,7 +151,7 @@ body {
   text-transform:capitalize;
   background-color:lightgray;
   margin: 15px;
-  padding: 20px;
+  padding: 10px;
   transition:300ms;
   filter: drop-shadow(2px 2px .5px #c2c2c2); /*added drops shadow to cards*/
 }
@@ -181,12 +184,29 @@ body {
   align-items:center;
 } 
 
+.myPicture {
+  width: 100px;
+}
+
 #display_pokepedia {
-  padding-top: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  padding: 40px 10px 40px 10px;
   background-color:#434343;
   color:white;
   width: 100%;
   height: 40px;
+}
+
+#type {
+  margin-top: 5px;
+  width: 200px;
+}
+
+#display_pokepedia label {
+  margin-top: 10px;
 }
 
 #display_pokepedia input, label {
@@ -199,18 +219,41 @@ body {
 
 #detailedDiv {
   text-transform:capitalize;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
 }
 
 #detailedDiv p {
-  text-align:left;
+  text-align:right;
+}
+
+#detailedName {
+  background-color:#434343;
+  text-transform:capitalize;
+  color:white;
+  margin: 0;
+  padding-block: 20px;
+  width: 100%;
+}
+
+#pokemonInfo {
+  margin-right: 50px;
 }
 
 #detailed_poke_title {
   font-size: 18px;
+  margin: 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
 }
 
 #detailsImage {
-  height: 400px;
+  height: 350px;
 }
 
 #random_pokemon {
@@ -227,4 +270,72 @@ button {
   background-color:green;
   color:white;
   padding: 5px 20px;
+}
+
+/* Media queries -Frankie */
+@media screen and (min-width: 1400px) {
+  .myPicture {
+    width: 150px;
+  }
+  .desktoplinks {
+    display: flex;
+  }
+  #display_pokepedia {
+    flex-direction:row;
+    padding: 10px 0px 10px 0px;
+  }
+  #detailsImage {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .desktoplinks {
+    display: flex;
+  }
+  .fa-bars {
+    display: none;
+  }
+  #display_pokepedia {
+    flex-direction:row;
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #myList {
+    grid-template-columns: auto auto auto auto auto;
+  }
+  #myList li {
+    padding: 5px;
+    margin: 5px;
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  #myList {
+    grid-template-columns: auto auto auto auto;
+  }
+  #myList li {
+    padding: 5px;
+    margin: 5px;
+  }
+  #detailedDiv {
+    flex-direction:column;
+  }
+  #detailedDiv p {
+    text-align:left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #myList {
+    grid-template-columns: auto auto auto;
+  }
+  #myList li {
+    padding: 5px;
+    margin: 5px;
+  }
+
 }
