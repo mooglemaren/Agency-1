@@ -234,7 +234,7 @@ body {
   text-transform:capitalize;
   color:white;
   margin: 0;
-  padding: 20px;
+  padding-block: 20px;
   width: 100%;
 }
 
