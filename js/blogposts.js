@@ -1,6 +1,23 @@
 // Defining the API endpoint URL
 const api = `https://agency.marenjohansen.no/wp/v2/posts`;
 
+async function getBlogMedia(media_id) {
+  try {
+    const endPointResponse = `https://agency.marenjohansen.no/wp-json/wp/v2/media/${media_id}`;
+
+    const response = await fetch(endPointResponse);
+
+    const data = await response.json();
+    return {
+      url: data.media_details.sizes.thumbnail.source_url,
+      title: data.title.rendered,
+    };
+  } catch (e) {
+    console.log(e);
+    return;
+  }
+}
+
 // Asynchronous function to fetch timeline data
 async function getBlogPostData() {
   try {
@@ -12,32 +29,33 @@ async function getBlogPostData() {
 
     // Parsing the response body as JSON
     const data = await response.json();
+    console.log(data);
 
-    //gjør det samme som forEach funksjonen under
+    //gjør det samme som forEach funksjonen under(changed to for-loop in order for it to be asynchronus)
     /* for (let i = 0; i < data.length; i++){
         const title = data[i].title;
         console.log(title)
     } */
-    data.forEach((data) => {
-      const { title, id, featured_media } = data; //desrtucture array (i dette tilfelle "data")
+    for (let i = 0; i < data.length; i++) {
+      const { title, id, featured_media } = data[i]; //destructure array (i dette tilfelle "data")
       console.log(title);
       const blogPostContainer = document.querySelector("#blogPostContainer");
       const blogPostCard = document.createElement("div");
       const blogPostPic = document.createElement("img");
       const blogPostTitle = document.createElement("h1");
       blogPostCard.className = "card";
-        if (!featured_media) {
-            blogPostPic.alt = "no image found"
-            //<img alt="no image found"></img>
-        } else [
-            blogPostPic.src = featured_media
-        ]
-
+      if (!featured_media) {
+        //<img alt="no image found"></img>
+      } else {
+        const data = await getBlogMedia(featured_media);
+        blogPostPic.src = data.url;
+        blogPostPic.alt = data.title;
+      }
 
       blogPostTitle.innerText = title.rendered;
       blogPostCard.append(blogPostTitle, blogPostPic);
       blogPostContainer.appendChild(blogPostCard);
-    });
+    }
     // Displaying the fetched data on the webpage
     //displayBlogPosts(data);
 
